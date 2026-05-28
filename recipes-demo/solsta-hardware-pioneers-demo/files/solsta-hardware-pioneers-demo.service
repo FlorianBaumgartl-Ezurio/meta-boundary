@@ -1,0 +1,16 @@
+[Unit]
+Description=Solsta Hardware Pioneers demo
+After=weston.service
+Requires=weston.service
+
+[Service]
+Type=simple
+User=root
+Environment=XDG_RUNTIME_DIR=/run/user/1000
+Environment=WAYLAND_DISPLAY=wayland-1
+ExecStart=/usr/bin/solsta-hardware-pioneers-demo.sh
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
