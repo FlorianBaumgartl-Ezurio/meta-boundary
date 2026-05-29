@@ -1,14 +1,14 @@
 [Unit]
-Description=Solsta Hardware Pioneers demo
+Description=Solsta Hardware Pioneers Demo
 After=weston.service
-Requires=weston.service
+Wants=weston.service
 
 [Service]
 Type=simple
 User=root
-Environment=XDG_RUNTIME_DIR=/run/user/1000
+Environment=XDG_RUNTIME_DIR=/run/user/0
 Environment=WAYLAND_DISPLAY=wayland-1
-ExecStart=/usr/bin/solsta-hardware-pioneers-demo.sh
+ExecStart=/home/weston/solsta-hardware-pioneers-demo.sh
 Restart=always
 RestartSec=2
 
