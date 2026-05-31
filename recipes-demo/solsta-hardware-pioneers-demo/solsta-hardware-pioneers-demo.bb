@@ -13,7 +13,7 @@ inherit systemd
 SYSTEMD_AUTO_ENABLE:${PN} = "enable"
 SYSTEMD_SERVICE:${PN} = "solsta-hardware-pioneers-demo.service"
 
-RDEPENDS:${PN} += "bash coreutils evtest gstreamer1.0 gstreamer1.0-plugins-base gstreamer1.0-plugins-good"
+RDEPENDS:${PN} += "bash coreutils evtest gstreamer1.0 gstreamer1.0-plugins-base gstreamer1.0-plugins-good libubootenv-bin"
 
 do_install() {
     install -d ${D}/home/weston
